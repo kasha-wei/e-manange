@@ -127,7 +127,7 @@
     </el-dialog>
 
     <!-- 修改参数的对话框 -->
-    <el-dialog :title="'修改' + titleText" :visible.sync="editDialogVisible" width="50%" @close="editDialogClosed">
+    <el-dialog :title="'修改' + titleText" :visible.sync="editDialogVisible" width="50%" @close="editDialogClose">
       <!-- 添加参数的对话框 -->
       <el-form :model="editForm" :rules="editFormRules" ref="editFormRef" label-width="100px">
         <el-form-item :label="titleText" prop="attr_name">
@@ -268,7 +268,7 @@ export default {
       this.editDialogVisible = true
     },
     // 重置修改表单
-    editDialogClosed () {
+    editDialogClose () {
       this.$refs.editFormRef.resetFields()
     },
     // 点击按钮,修改参数

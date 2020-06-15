@@ -79,7 +79,7 @@
         </span>
       </el-dialog>
       <!-- 修改内容区域 -->
-      <el-dialog title="修改用户" :visible.sync="editDialogVisible" width="50%" @close="editDialogClosed">
+      <el-dialog title="修改用户" :visible.sync="editDialogVisible" width="50%" @close="editDialogClose">
         <el-form ref="editFormRef" :rules="editFormRules" :model="editForm" label-width="70px">
           <el-form-item label="用户名">
             <el-input v-model="editForm.username" disabled></el-input>
